@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo Piscante</title>
+    <style>
+        body {
+            transition: background-color 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            font-family: Arial;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: #000;
+        }
+        .voltar-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            font-size: 18px;
+            font-family: Arial;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .voltar-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vitória AO</h1>
+    <button class="voltar-btn" onclick="history.back()">Voltar</button>
+
+    <script>
+        let isBlue = true;
+        setInterval(() => {
+            document.body.style.backgroundColor = isBlue ? "white" : "#0000c0";
+            isBlue = !isBlue;
+        }, 400);
+    </script>
+</body>
+</html>

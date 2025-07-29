@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Karatê</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+        }
+
+        .btn-nav {
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-nav:hover {
+            background-color: #004999;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img width="200" src="jks.webp" alt="Logotipo JKS">
+    </div>
+
+    <div class="container">
+        <button class="btn-nav" onclick="window.location.href='kumite.html'">KUMITE</button>
+        <button class="btn-nav" onclick="window.location.href='kata.html'">KATA</button>
+        <button class="btn-nav" onclick="window.location.href='kata-individual.html'">KATA INDIVIDUAL</button>
+    </div>
+</body>
+</html>
