@@ -7,6 +7,17 @@ const categorias = {
     kobudo: ["Suushi No Kon", "Sueyoshi No Kon", "Sakugawa No Kon", "Shirotaru No Kon", "Matsukaze No Kon", "Heian Shodan", "Heian Nidan", "Heian Sandan", "Heian Yondan", "Heian Godan"]
 };
 
+const Choose = {
+    aka: 'Aka',
+    ao: 'Ao',
+    ippon: 'ippon',
+    wazaari: "wazaari",
+    fault: "fault",
+    jogai: "jogai",
+};
+
+// Usage
+console.log(Choose.aka); // Output: 'Aka'
 
 function atualizarLista(categoriaSelectId, nomeSelectId) {
     let categoriaSelecionada = document.getElementById(categoriaSelectId).value;
@@ -34,6 +45,7 @@ function mostrarNome(nomeSelectId, nomeExibidoId) {
 
 // KUMITE
 
+var isTimingRunning = false
 let tempoPadrao = 180;
 let tempoRestante = tempoPadrao;
 let intervalo;
@@ -46,7 +58,15 @@ function formatarTempo(segundos) {
 
 function iniciar() {
     // alert("Iniciado");
-    document.getElementById("initialButton").style.backgroundColor = "rgba(255, 0, 0, 0)"; // totalmente opaco
+    // document.getElementById("initialButton").style.backgroundColor = "rgba(255, 0, 0, 0)"; // totalmente opaco
+    isTimingRunning = true;
+    if (tempoRestante > 0) {
+        tempoRestante--;
+        document.getElementById("tempo").innerText = formatarTempo(tempoRestante);
+    } else {
+        clearInterval(intervalo);
+    }
+
     if (!intervalo) {
         intervalo = setInterval(() => {
             if (tempoRestante > 0) {
@@ -59,57 +79,53 @@ function iniciar() {
     }
 }
 
+function add1sec() {
+    tempoRestante++;
+    document.getElementById("tempo").innerText = formatarTempo(tempoRestante);
+}
+
+function remover1sec() {
+    tempoRestante--;
+    document.getElementById("tempo").innerText = formatarTempo(tempoRestante);
+}
+
 function pausar() {
     clearInterval(intervalo);
     intervalo = null;
+    isTimingRunning = false;
 }
 
-function reiniciar1min() {
-    pausar();
-    tempoRestante = 60;
-    document.getElementById("tempo").innerText = formatarTempo(tempoRestante);
+function reiniciarTime(value) {
+    if(!isTimingRunning) {
+        tempoRestante = value;
+        pausar();
+        tempoRestante = value;
+        document.getElementById("tempo").innerText = formatarTempo(tempoRestante);
+    }
 }
 
-function reiniciar2min() {
-    pausar();
-    tempoRestante = 120;
-    document.getElementById("tempo").innerText = formatarTempo(tempoRestante);
-}
-
-function reiniciar3min() {
-    pausar();
-    tempoRestante = 180;
-    document.getElementById("tempo").innerText = formatarTempo(tempoRestante);
-}
-
-function adicionarPonto(lutador) {
-    let elemento = document.getElementById(`pontos${lutador}`);
+function addValue(lutador, tipo) {
+    let elemento = document.getElementById(`${tipo}${lutador}`);
     let pontos = parseInt(elemento.innerText);
     if (pontos < 4) {
         elemento.innerText = pontos + 1;
+        if (tipo === Choose.ippon || tipo === Choose.wazaari) {
+            let elemento = document.getElementById(`points${lutador}`);
+            let pontosTotal = parseInt(elemento.innerText);
+            elemento.innerText = pontosTotal + (tipo === Choose.ippon ? 2 : 1);
+        }
     }
 }
 
-function adicionarFalta(lutador) {
-    let elemento = document.getElementById(`faltas${lutador}`);
-    let faltas = parseInt(elemento.innerText);
-    if (faltas < 3) {
-        elemento.innerText = faltas + 1;
-    }
-}
-
-function removerPonto(lutador) {
-    let elemento = document.getElementById(`pontos${lutador}`);
+function removeValue(lutador, tipo) {
+    let elemento = document.getElementById(`${tipo}${lutador}`);
     let pontos = parseInt(elemento.innerText);
     if (pontos > 0) {
         elemento.innerText = pontos - 1;
-    }
-}
-
-function removerFalta(lutador) {
-    let elemento = document.getElementById(`faltas${lutador}`);
-    let faltas = parseInt(elemento.innerText);
-    if (faltas > 0) {
-        elemento.innerText = faltas - 1;
+        if (tipo === Choose.ippon || tipo === Choose.wazaari) {
+            let elemento = document.getElementById(`points${lutador}`);
+            let pontosTotal = parseInt(elemento.innerText);
+            elemento.innerText = pontosTotal - (tipo === Choose.ippon ? 2 : 1);
+        }
     }
 }

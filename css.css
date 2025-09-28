@@ -17,7 +17,7 @@ h2 {
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 'consolas';"
+    font-family: 'consolas';
     word-wrap: break-word;
     padding: 10px;
     line-height: 110px;
@@ -28,22 +28,21 @@ h3 {
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 'consolas';"
+    font-family: 'consolas';
     padding: 0px;
     line-height: 10px;
     margin-top: 30px;
 }
 
-.container {
-    display: flex; /* Define o container como flex */
-    justify-content: space-between; /* Alinha as divs horizontalmente */
-    align-items: center; /* Alinha verticalmente */
-    width: 100%; /* Largura do container */
-}
-.div1, .div2 {
-    width: 48%; /* Define a largura das divs */
-    border-radius: 10px;
+strong {
     color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
 .cronometro {
@@ -65,9 +64,24 @@ h3 {
 
 .div-item {
     /* Estilos para cada div individual */
-    width: 100px; /* Largura da div */
+    /* width: 100px; Largura da div */
     color: #fff;
     margin: 8px; /* Espaço entre as divs */
+}
+
+.div-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que as divs se movam para a próxima linha se não houver espaço suficiente */
+}
+
+.div-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+    flex-direction: column;
 }
 
 .placar {
@@ -100,10 +114,13 @@ button:hover {
     background-color: #fbc900;
 }
 
+.button-selection {
+    font-size: large;
+}
 
 .footer-container {
     position: fixed;
-    bottom: 0;
+    bottom: 50px;
     width: 100%;
     display: flex;
 }
@@ -113,6 +130,16 @@ button:hover {
     height: 50px; /* Ajuste conforme necessário */
     text-align: center;
     line-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-box-item{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
 }
 
 .select {
