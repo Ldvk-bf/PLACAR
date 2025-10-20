@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karate board</title>
+</head>
+<body style="margin: 0; padding: 0;">
+<style>
+
+body {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    color: #595959;
+    background: #c00000;
+    display: grid;
+    place-items: center; /* Centraliza ambos os eixos */
+    margin: 0;
+}
+
+h2 {
+    font-size: 160px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'consolas';
+    word-wrap: break-word;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+  display: flex; /* Define o container como flex */
+  justify-content: space-between; /* Alinha as divs horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  width: 100%; /* Largura do container */
+}
+
+.div1, .div2 {
+  width: 48%; /* Define a largura das divs */
+  border-radius: 10px;
+  color: #fff;
+}
+
+.div-item {
+    /* Estilos para cada div individual */
+    width: 100px; /* Largura da div */
+    color: #fff;
+    margin: 8px; /* Espaço entre as divs */
+}
+
+.centro {
+    width: 100vw; /* Ocupa toda a largura */
+    height: 100vh; /* Ocupa toda a altura */
+    position: absolute; /* Fica sobre os outros elementos */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; /* Coloca atrás dos outros elementos */
+}
+
+button {
+    margin: 0 0 5px 0;
+    padding: 7px;
+    height: 40px;
+    font-size: 12px;
+    font-family: Arial;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #fbc900;
+}
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.select {
+  width:250px;
+  height:40px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid silver;
+  padding: 0 0 0 10px;
+  margin: 5px;
+}
+</style>
+
+    <div class="placar">
+        <div style="background-color: #fff; border-radius: 10px; margin-top: 20px; padding: 0px;">
+            <img alt="imagem JKS" width="100" src="../Assets/jks.webp">
+        </div>
+    </div>
+    <div class="centro">
+        <h2 id="nomeExibido"></h2>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-box">
+            <button id="mudarCor">Aka | AO</button>
+
+            <select id="categoriaSelect" class="select" title="selectTypeOfKata"  onchange="atualizarLista('categoriaSelect', 'nomeSelect')">
+                <option value="">Select</option>
+                <option value="shiteikata">Shitei Kata</option>
+                <option value="junro">Junro</option>
+                <option value="senteikata">Sentei Kata</option>
+                <option value="tokuikata">Tokui Kata</option>
+                <option value="kotenkata">Koten Kata</option>
+                <option value="kobudo">Kobudo</option>
+            </select>
+            <select id="nomeSelect" class="select" title="selectKata" onchange="mostrarNome('nomeSelect', 'nomeExibido')">
+                <option value="">Select a kata</option>
+            </select>
+
+            <a href="vitoria-aka.html"><button>Winner Aka</button></a>
+            <a href="vitoria-ao.html"><button>Winner Ao</button></a>
+        </div>
+    </div>
+
+<script src="js/kata.js"></script>
+<script src="js/show_to_public.js"></script>
+</body>
+</html>

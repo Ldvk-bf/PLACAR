@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
-    <title>Placar de Karatê</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Karatê</title>
 </head>
 <body style="margin: 0; padding: 0;">
 
@@ -14,7 +14,7 @@
         <div>
             <div class="container">
                 <div class="div-item">
-                    <p style="font-size: 30px; margin-top: -50px;">ポイント (POINTS)</p>
+                    <p style="font-size: 30px; margin-top: -50px;">POINTS</p>
                     <p style="margin-top: -50px; font-size: 300px; font-weight: bold; font-family: 'consolas';" id="pointsAka">0</p>
                 </div>
             </div>
@@ -22,22 +22,22 @@
             <div class="container">
                 <div class="div-item">
                     <p style="margin-top: -70px; font-size: 150px; font-weight: bold; font-family: 'consolas';" id="ipponAka">0</p>
-                    <p style="font-size: 20px;">一本 (IPPON)</p>
+                    <p style="font-size: 20px;">IPPON</p>
                 </div>
                 <div class="div-item">
                     <p style="margin-top: -70px; font-size: 150px; font-weight: bold; font-family: 'consolas';" id="wazaariAka">0</p>
-                    <p style="font-size: 20px;">技あり (WAZA-ARI)</p>
+                    <p style="font-size: 20px;">WAZA-ARI</p>
                 </div>
             </div>
             
             <div class="container" style="margin-top: 0px;">
                 <div class="div-item">
                     <p style="font-size: 100px; font-weight: bold; font-family: 'consolas';" id="jogaiAka">0</p>
-                    <p style="font-size: 20px; margin-top: -10px;">場外 (JŌGAI)</p>
+                    <p style="font-size: 20px; margin-top: -10px;">JŌGAI</p>
                 </div>
                 <div class="div-item">
                     <p style="font-size: 100px; font-weight: bold; font-family: 'consolas';" id="faultAka">0</p>
-                    <p style="font-size: 20px; margin-top: -10px;">犯則 (HANSOKU)</p>
+                    <p style="font-size: 20px; margin-top: -10px;">HANSOKU</p>
                 </div>
             </div>
         </div>
@@ -45,15 +45,15 @@
         
 
         <div class="cronometro" style="background-color: #fff; border-radius: 10px; margin-top: 0px; padding: 20px;">
-            <button class="voltar-btn" onclick="history.back()">Voltar</button>
+            <button class="voltar-btn" onclick="location.href='../index.html'">Back</button>
+            <button onclick="mostrarNoPublico('kumite')">Show Kumite to public</button>
             <br/>
-            <img width="200" src="jks.webp" style="margin-bottom: 10px;">
+            <img alt="Imagem de exemplo" width="200" src="../Assets/jks.webp" style="margin-bottom: 10px;">
             <div style="border: 2px solid silver; background-color: #000; border-radius: 8px;">
                 <p style="font-size: 200px; font-family: 'Roboto'; font-weight: bold; margin-bottom: -40px; margin-top: -50px; color: #fff; padding: 10px; letter-spacing: -8px;" id="tempo">03:00</p>
             </div>
             <br/>
             <div class="div-row">
-
                 <div class="div-column">
                     Time Controller
                     <button id="initialButton" onclick="iniciar()">START</button>
@@ -72,9 +72,9 @@
                 
                 <div class="div-column">
                     Winner
-                    <a href="vitoria-aka.html"><button>Vitoria Aka</button></a>
-                    <button id="mudarCor">Aka | AO</button>
-                    <a href="vitoria-ao.html"><button>Vitoria Ao</button></a>
+                    <a href="../Winner/vitoria-aka.html"><button>Winner Aka</button></a>
+                    <a href="../Winner/vitoria-ao.html"><button>Winner Ao</button></a>
+                    <button onclick="reiniciarPlacar()">Restart</button>
                 </div>
             </div>
                 
@@ -96,7 +96,7 @@
         <div>
             <div class="container">
                 <div class="div-item">
-                    <p style="font-size: 30px; margin-top: -50px;">ポイント (POINTS)</p>
+                    <p style="font-size: 30px; margin-top: -50px;">POINTS</p>
                     <p style="margin-top: -50px; font-size: 300px; font-weight: bold; font-family: 'consolas';" id="pointsAo">0</p>
                 </div>
             </div>
@@ -104,22 +104,22 @@
             <div class="container">
                 <div class="div-item">
                     <p style="margin-top: -70px; font-size: 150px; font-weight: bold; font-family: 'consolas';" id="ipponAo">0</p>
-                    <p style="font-size: 20px;">一本 (IPPON)</p>
+                    <p style="font-size: 20px;">IPPON</p>
                 </div>
                 <div class="div-item">
                     <p style="margin-top: -70px; font-size: 150px; font-weight: bold; font-family: 'consolas';" id="wazaariAo">0</p>
-                    <p style="font-size: 20px;">技あり (WAZA-ARI)</p>
+                    <p style="font-size: 20px;">WAZA-ARI</p>
                 </div>
             </div>
             
             <div class="container" style="margin-top: 0px;">
                 <div class="div-item">
                     <p style="font-size: 100px; font-weight: bold; font-family: 'consolas';" id="jogaiAo">0</p>
-                    <p style="font-size: 20px; margin-top: -10px;">場外 (JŌGAI)</p>
+                    <p style="font-size: 20px; margin-top: -10px;">JŌGAI</p>
                 </div>
                 <div class="div-item">
                     <p style="font-size: 100px; font-weight: bold; font-family: 'consolas';" id="faultAo">0</p>
-                    <p style="font-size: 20px; margin-top: -10px;">犯則 (HANSOKU)</p>
+                    <p style="font-size: 20px; margin-top: -10px;">HANSOKU</p>
                 </div>
             </div>
         </div>
@@ -130,25 +130,25 @@
         <div class="footer-box">
             <div class="footer-box-item">
                 <button class="button-selection" onclick="addValue(Choose.aka, Choose.ippon)">+</button>
-                <strong>一本 (IPPON)</strong>
+                <strong>IPPON</strong>
                 <button class="button-selection" onclick="removeValue(Choose.aka, Choose.ippon)">-</button>
             </div>
             
             <div class="footer-box-item">
                 <button class="button-selection" onclick="addValue(Choose.aka, Choose.wazaari)">+</button>
-                <strong>技あり (WAZA-ARI)</strong>
+                <strong>WAZA-ARI</strong>
                 <button class="button-selection" onclick="removeValue(Choose.aka, Choose.wazaari)">-</button>
             </div>
 
             <div class="footer-box-item">
                 <button class="button-selection" onclick="addValue(Choose.aka, Choose.jogai)">+</button>
-                <strong>場外 (JŌGAI)</strong>
+                <strong>JŌGAI</strong>
                 <button class="button-selection" onclick="removeValue(Choose.aka, Choose.jogai)">-</button>
             </div>
 
             <div class="footer-box-item">
                 <button class="button-selection" onclick="addValue(Choose.aka, Choose.fault)">+</button>
-                <strong>犯則 (HANSOKU)</strong>
+                <strong>HANSOKU</strong>
                 <button class="button-selection" onclick="removeValue(Choose.aka, Choose.fault)">-</button>
             </div>
         </div>
@@ -156,30 +156,31 @@
         <div class="footer-box">
             <div class="footer-box-item">
                 <button class="button-selection" onclick="addValue(Choose.ao, Choose.ippon)">+</button>
-                <strong>一本 (IPPON)</strong>
+                <strong>IPPON</strong>
                 <button class="button-selection" onclick="removeValue(Choose.ao, Choose.ippon)">-</button>
             </div>
             
             <div class="footer-box-item">
                 <button class="button-selection" onclick="addValue(Choose.ao, Choose.wazaari)">+</button>
-                <strong>技あり (WAZA-ARI)</strong>
+                <strong>WAZA-ARI</strong>
                 <button class="button-selection" onclick="removeValue(Choose.ao, Choose.wazaari)">-</button>
             </div>
 
             <div class="footer-box-item">
                 <button class="button-selection" onclick="addValue(Choose.ao, Choose.jogai)">+</button>
-                <strong>場外 (JŌGAI)</strong>
+                <strong>JŌGAI</strong>
                 <button class="button-selection" onclick="removeValue(Choose.ao, Choose.jogai)">-</button>
             </div>
 
             <div class="footer-box-item">
                 <button class="button-selection" onclick="addValue(Choose.ao, Choose.fault)">+</button>
-                <strong>犯則 (HANSOKU)</strong>
+                <strong>HANSOKU</strong>
                 <button class="button-selection" onclick="removeValue(Choose.ao, Choose.fault)">-</button>
             </div>
         </div>
     </div>
 
-<script src="js.js"></script>
+<script src="../js/kumite_operator.js"></script>
+<script src="../js/show_to_public.js"></script>
 </body>
 </html>

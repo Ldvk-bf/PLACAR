@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placar de Karatê</title>
+    <title>karate board</title>
 </head>
 <body style="margin: 0; padding: 0;">
 <style>
@@ -18,12 +18,12 @@ body {
     margin: 0;
 }
 
-h2 { 
-    font-size: 160px; 
+h2 {
+    font-size: 160px;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 'consolas';"
+    font-family: 'consolas';
     word-wrap: break-word;
 }
 
@@ -100,7 +100,7 @@ button:hover {
 
     <div class="placar">
         <div style="background-color: #fff; border-radius: 10px; margin-top: 20px; padding: 0px;">
-            <img width="100" src="jks.webp">
+            <img alt="imagem JKS" width="100" src="../Assets/jks.webp">
         </div>
     </div>
     <div class="centro">
@@ -111,8 +111,8 @@ button:hover {
         <div class="footer-box">
             <button id="mudarCor">Aka | AO</button>
 
-            <select class="select" id="categoriaSelect" onchange="atualizarLista()">
-                <option value="">Selecionar</option>
+            <select id="categoriaSelect" class="select" title="selectTypeOfKata"  onchange="atualizarLista('categoriaSelect', 'nomeSelect')">
+                <option value="">Select</option>
                 <option value="shiteikata">Shitei Kata</option>
                 <option value="junro">Junro</option>
                 <option value="senteikata">Sentei Kata</option>
@@ -120,52 +120,16 @@ button:hover {
                 <option value="kotenkata">Koten Kata</option>
                 <option value="kobudo">Kobudo</option>
             </select>
-
-            <select class="select" id="nomeSelect" onchange="mostrarNome()">
-                <option value="">Selecione um nome</option>
+            <select id="nomeSelect" class="select" title="selectKata" onchange="mostrarNome('nomeSelect', 'nomeExibido')">
+                <option value="">Select a kata</option>
             </select>
 
-            <a href="vitoria-aka.html"><button>Vitoria Aka</button></a>
-            <a href="vitoria-ao.html"><button>Vitoria Ao</button></a>
+            <a href="../Winner/vitoria-aka.html"><button>Winner Aka</button></a>
+            <a href="../Winner/vitoria-ao.html"><button>Winner Ao</button></a>
         </div>
     </div>
 
-<script src="js.js"></script>
-
-<script>
-
-function atualizarLista() {
-    let categoriaSelecionada = document.getElementById("categoriaSelect").value;
-    let nomeSelect = document.getElementById("nomeSelect");
-
-    // Limpa as opções anteriores
-    nomeSelect.innerHTML = "<option value=''>Selecione um nome</option>";
-
-    if (categoriaSelecionada && categorias[categoriaSelecionada]) {
-        categorias[categoriaSelecionada].forEach(nome => {
-            let option = document.createElement("option");
-            option.value = nome;
-            option.textContent = nome;
-            nomeSelect.appendChild(option);
-        });
-    }
-}
-
-function mostrarNome() {
-    let select = document.getElementById("nomeSelect");
-    let nomeSelecionado = select.value;
-    document.getElementById("nomeExibido").innerText = nomeSelecionado ? nomeSelecionado : "Nenhum nome selecionado";
-}
-
-
-const cores = ["#0000c0", "#c00000"];
-let index = 0;
-
-document.getElementById("mudarCor").addEventListener("click", function() {
-    document.body.style.backgroundColor = cores[index];
-    index = (index + 1) % cores.length; // Reinicia para o primeiro após atingir o último
-});
-
-</script>
+<script src="../js/kata.js"></script>
+<script src="../js/show_to_public.js"></script>
 </body>
 </html>

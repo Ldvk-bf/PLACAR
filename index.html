@@ -16,6 +16,10 @@
             font-family: Arial, sans-serif;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         .logo {
             margin-bottom: 40px;
         }
@@ -43,13 +47,16 @@
 </head>
 <body>
     <div class="logo">
-        <img width="200" src="jks.webp" alt="Logotipo JKS">
+        <img width="200" src="Assets/jks.webp" alt="Logotipo JKS">
     </div>
 
     <div class="container">
-        <button class="btn-nav" onclick="window.location.href='kumite.html'">KUMITE</button>
-        <button class="btn-nav" onclick="window.location.href='kata.html'">KATA</button>
-        <button class="btn-nav" onclick="window.location.href='kata-individual.html'">KATA INDIVIDUAL</button>
+        <button class="btn-nav" onclick="window.location.href='Operator/kumite_operator.html'">KUMITE</button>
+        <button class="btn-nav" onclick="window.location.href='Operator/kata_individual_operator.html'">KATA INDIVIDUAL</button>
+        <button class="btn-nav" onclick="window.location.href='Operator/kata_operator.html'">KATA</button>
+        
     </div>
+    <br>
+    <a class="btn-nav" href="Public/presenting_to_public.html" target="_blank" rel="noopener noreferrer">PRESENTATION TO THE PUBLIC</a>
 </body>
 </html>

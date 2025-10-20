@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Karate Board</title>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <div class="logo">
+        <div style="background-color: #fff; border-radius: 10px; margin-top: 20px; padding: 0px;">
+            <img alt="imagem jks" width="100" src="../Assets/jks.webp">
+        </div>
+    </div>
+    <button class="voltar-btn" onclick="location.href='../index.html'">Back</button>
+    <br>
+    <button onclick="mostrarNoPublico('kata')">Show kata to public</button>
+    <!-- TODO: Rever isso para converter a posição -->
+    <div class="centro">
+        <h2 id="nameShowAka"></h2>
+        <h2 id="nameShowAo"></h2>
+    </div>
+    <div class="footer-container">
+        <div class="footer-box">
+            <select id="categorySelectAka" class="select" title="selectTypeOfKataAka"  onchange="atualizarLista('categorySelectAka', 'nameSelectAka')">
+                <option value="">Select</option>
+                <option value="shiteikata">Shitei Kata</option>
+                <option value="junro">Junro</option>
+                <option value="senteikata">Sentei Kata</option>
+                <option value="tokuikata">Tokui Kata</option>
+                <option value="kotenkata">Koten Kata</option>
+                <option value="kobudo">Kobudo</option>
+            </select>
+            <select id="nameSelectAka" class="select" title="selectKataAka" onchange="mostrarNome('nameSelectAka', 'nameShowAka')">
+                <option value="">Select a kata</option>
+            </select>
+            <a href="../Winner/vitoria-aka.html"><button>Winner Aka</button></a>
+        </div>
+
+            
+        <div class="footer-box">
+            <a href="../Winner/vitoria-ao.html"><button>Winner Ao</button></a>
+            <select id="categorySelectAo" class="select" title="selectTypeOfKataAo" onchange="atualizarLista('categorySelectAo', 'nameSelectAo')">
+                <option value="">Select</option>
+                <option value="shiteikata">Shitei Kata</option>
+                <option value="junro">Junro</option>
+                <option value="senteikata">Sentei Kata</option>
+                <option value="tokuikata">Tokui Kata</option>
+                <option value="kotenkata">Koten Kata</option>
+                <option value="kobudo">Kobudo</option>
+            </select>
+
+            <select id="nameSelectAo" class="select" title="selectKataAo" onchange="mostrarNome('nameSelectAo', 'nameShowAo')">
+                <option value="">Select a kata</option>
+            </select>
+        </div>
+    </div>
+    <script src="../js/kata_operator.js"></script>
+    <script src="../js/show_to_public.js"></script>
+</body>
+</html>
