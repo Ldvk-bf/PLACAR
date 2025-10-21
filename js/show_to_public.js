@@ -1,6 +1,16 @@
 const canalModo = new BroadcastChannel("modoApresentacao");
 
-  function mostrarNoPublico(modo) {
+// Envia o modo para o público
+function mostrarNoPublico(modo) {
     canalModo.postMessage({ modo });
-    alert("Apresentação pública alterada para: " + modo.toUpperCase());
-  }
+}
+
+// Volta para o modo anterior
+function voltarModoAnterior() {
+    const penultimo = localStorage.getItem("penultimoModoPublico");
+    if (penultimo) {
+        mostrarNoPublico(penultimo);
+    } else {
+        alert("Nenhum modo anterior encontrado!");
+    }
+}

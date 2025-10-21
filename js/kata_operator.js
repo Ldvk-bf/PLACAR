@@ -117,9 +117,6 @@ window.addEventListener("load", () => {
     if (dados.backgroundColor) {
       document.body.style.backgroundColor = dados.backgroundColor;
     }
-
-    // Reenvia o estado após restaurar (garantir sincronização com o público)
-    setTimeout(() => enviarEstado(), 300);
   } else {
     // Caso não haja dados salvos, envia estado inicial
     enviarEstado();
@@ -127,6 +124,7 @@ window.addEventListener("load", () => {
 
   ajustarTamanhoTexto("nameShowAka");
   ajustarTamanhoTexto("nameShowAo");
+  setTimeout(() => enviarEstado(), 300);
 });
 
 // -------- Alternância de cores e IDs --------
@@ -157,3 +155,9 @@ function trocarSufixo(antigo, novo) {
     el.id = novoId;
   });
 }
+
+canal.onmessage = (e) => {
+  if (e.data.tipo === "pedido_estado") {
+    enviarEstado();
+  }
+};

@@ -1,5 +1,7 @@
+// Canal de comunicação entre abas
 const canalModo = new BroadcastChannel("modoApresentacao");
 
+// Função para carregar a tela pública conforme o modo
 function carregarTela(modo) {
     const conteudo = document.getElementById("conteudo");
 
@@ -26,16 +28,21 @@ function carregarTela(modo) {
 // Ao abrir, fica aguardando modo inicial
 carregarTela(null);
 
-// Quando o operador enviar um modo, atualiza
-canalModo.onmessage = (e) => carregarTela(e.data.modo);
+// Lê modos salvos
+let ultimoModo = localStorage.getItem("ultimoModoPublico");
+let penultimoModo = localStorage.getItem("penultimoModoPublico");
 
-// Lê o último modo salvo (caso o operador tenha recarregado)
-const ultimoModo = localStorage.getItem("ultimoModoPublico");
+// Se já houver modo salvo, carrega
 if (ultimoModo) carregarTela(ultimoModo);
 
-// Sempre salva o último modo ao trocar
+// Quando receber mensagem, atualiza modos
 canalModo.onmessage = (e) => {
     const modo = e.data.modo;
-    localStorage.setItem("ultimoModoPublico", modo);
+    penultimoModo = ultimoModo;
+    ultimoModo = modo;
+
+    localStorage.setItem("penultimoModoPublico", penultimoModo);
+    localStorage.setItem("ultimoModoPublico", ultimoModo);
+
     carregarTela(modo);
 };

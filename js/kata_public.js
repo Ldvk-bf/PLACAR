@@ -4,6 +4,8 @@
 
 const canal = new BroadcastChannel("placarKata");
 
+canal.postMessage({ tipo: "pedido_estado" });
+
 function ajustarTamanhoTexto(id) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -81,3 +83,4 @@ window.addEventListener("load", () => {
     ajustarTamanhoTexto("nameShowAka");
     ajustarTamanhoTexto("nameShowAo");
 });
+

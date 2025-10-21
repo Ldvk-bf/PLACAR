@@ -73,25 +73,11 @@
                 
                 <div class="div-column">
                     Winner
-                    <button onclick="if(!isTimingRunning){mostrarNoPublico('winner_aka');}">Winner Aka</button>
-                    <button onclick="if(!isTimingRunning){mostrarNoPublico('winner_ao');}">Winner Ao</button>
+                    <button onclick="if(!isTimingRunning){reiniciarPlacar(); mostrarNoPublico('winner_aka');}">Winner Aka</button>
+                    <button onclick="if(!isTimingRunning){reiniciarPlacar(); mostrarNoPublico('winner_ao');}">Winner Ao</button>
                     <button onclick="reiniciarPlacar()">Restart</button>
                 </div>
             </div>
-                
-
-            <script>
-                const cores = ["#c00000", "#0000c0"];
-                let indexRight = 1;
-                let indexLeft = 0;
-
-                document.getElementById("mudarCor").addEventListener("click", function() {
-                    document.body.style.background = `linear-gradient(to right, ${cores[indexRight]} 50%, ${cores[indexLeft]} 50%)`;
-                    indexRight = (indexRight + 1) % cores.length;
-                    indexLeft = (indexLeft + 1) % cores.length;
-                });
-            </script>
-    
         </div>
 
         <div>

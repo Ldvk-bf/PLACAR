@@ -8,13 +8,18 @@
 </head>
 <body>
     <h1>Vitória Aka</h1>
-
+    
     <script>
         let isBlue = true;
         setInterval(() => {
             document.body.style.backgroundColor = isBlue ? "white" : "#c00000";
             isBlue = !isBlue;
         }, 400);
+
+        setTimeout(() => {
+            voltarModoAnterior()
+        }, 2000);
     </script>
+    <script src="../js/show_to_public.js"></script>
 </body>
 </html>
