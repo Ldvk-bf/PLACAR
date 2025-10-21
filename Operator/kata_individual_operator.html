@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style_kata_individual.css">
+    <link rel="stylesheet" href="../css/style_button_public.css">
     <title>karate board</title>
 </head>
 
@@ -20,7 +21,7 @@
 
     <div class="footer-container">
         <div class="footer-box">
-            <button onclick="mostrarNoPublico('kata_individual'); enviarEstado();">Show kata individual to public</button>
+            <button id="showPublicButton" onclick="mostrarNoPublico('kata_individual'); enviarEstado();">Show this to public</button>
             <button class="voltar-btn" onclick="location.href='../index.html'">Back</button>
             <button id="mudarCor">Aka | AO</button>
 

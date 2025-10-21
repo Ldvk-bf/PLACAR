@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_button_public.css">
     <title>Karate Board</title>
 </head>
 
@@ -15,7 +16,7 @@
     </div>
     <button class="voltar-btn" onclick="location.href='../index.html'">Back</button>
     <br>
-    <button onclick="mostrarNoPublico('kata')">Show kata to public</button>
+    <button id="showPublicButton" onclick="mostrarNoPublico('kata')">Show this to public</button>
     <!-- TODO: Rever isso para converter a posição -->
     <div class="centro">
         <h2 id="nameShowAka"></h2>
@@ -40,7 +41,7 @@
 
             
         <div class="footer-box">
-            <a href="../Winner/vitoria-ao.html"><button>Winner Ao</button></a>
+            <button onclick="mostrarNoPublico('winner_ao');">Winner Ao</button>
             <select id="categorySelectAo" class="select" title="selectTypeOfKataAo" onchange="atualizarLista('categorySelectAo', 'nameSelectAo')">
                 <option value="">Select</option>
                 <option value="shiteikata">Shitei Kata</option>
