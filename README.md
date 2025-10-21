@@ -94,7 +94,7 @@ Ela escuta comandos do operador e exibe automaticamente a modalidade ativa:
 * 🟦 **Kata:** nomes e categorias dos katas feitos
 * 🟩 **Kata Individual:** versão individual do mesmo formato
 
-A troca é instantânea — basta o operador clicar em **“Show Kumite”**, **“Show Kata”** ou **“Show Kata Individual”**.
+A troca é instantânea
 
 ---
 
@@ -154,13 +154,7 @@ Compatível com: **Chrome**, **Edge**, **Firefox**, **Safari** e **Brave**.
    `Public/presenting_to_public.html`
    (em outra aba, navegador, ou tela estendida)
 
-5. **No operador, clique:**
-
-   * “Show Kumite” → exibe o placar do Kumite
-   * “Show Kata” → mostra o Kata atual
-   * “Show Kata Individual” → modo individual de exibição
-
-6. O sistema se atualiza **instantaneamente**, **sem internet**, **sem servidor** ⚡
+5. O sistema se atualiza **instantaneamente**, **sem internet**, **sem servidor** ⚡
 
 ---
 
