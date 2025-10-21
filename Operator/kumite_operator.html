@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Karatê</title>
 </head>
 <body style="margin: 0; padding: 0;">
@@ -72,8 +72,8 @@
                 
                 <div class="div-column">
                     Winner
-                    <a href="../Winner/vitoria-aka.html"><button>Winner Aka</button></a>
-                    <a href="../Winner/vitoria-ao.html"><button>Winner Ao</button></a>
+                    <button onclick="if(!isTimingRunning){mostrarNoPublico('winner_aka');}">Winner Aka</button>
+                    <button onclick="if(!isTimingRunning){mostrarNoPublico('winner_ao');}">Winner Ao</button>
                     <button onclick="reiniciarPlacar()">Restart</button>
                 </div>
             </div>
