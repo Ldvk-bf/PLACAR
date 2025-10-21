@@ -21,7 +21,7 @@
 
     <div class="footer-container">
         <div class="footer-box">
-            <button id="showPublicButton" onclick="mostrarNoPublico('kata_individual'); enviarEstado();">Show Kata Individual</button>
+            <!-- <button id="showPublicButton" onclick="mostrarNoPublico('kata_individual'); enviarEstado();">Show Kata Individual</button> -->
             <button class="voltar-btn" onclick="location.href='../index.html'">Back</button>
             <button id="mudarCor">Aka | AO</button>
 
@@ -36,7 +36,7 @@
                 <option value="kobudo">Kobudo</option>
             </select>
             <select id="nameSelectAka" class="select" title="selectKata"
-                onchange="mostrarNome('nameSelectAka', 'nameShowAka')">
+                onchange="mostrarNome('nameSelectAka', 'nameShowAka')" onselect="enviarEstado();">
                 <option value="">Select a kata</option>
             </select>
             <button onclick="mostrarNoPublico('winner_aka');">Winner Aka</button>
