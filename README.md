@@ -1,5 +1,5 @@
 
-# 🥋 Karate Scoreboard
+# 🥋 Karate Scoreboard (PLACAR)
 
 > Sistema de placar digital para campeonatos de Karatê — desenvolvido por **Ludivik de Paula** em parceria com **Jorge**.
 > O projeto já foi utilizado em **dois campeonatos internos da Unicamp** e em um **Campeonato Panamericano de Karatê**.
@@ -138,8 +138,8 @@ Compatível com: **Chrome**, **Edge**, **Firefox**, **Safari** e **Brave**.
 1. **Baixe ou clone o repositório:**
 
    ```bash
-   git clone https://github.com/<seu-usuario>/karate-scoreboard.git
-   cd karate-scoreboard
+   git clone https://github.com/Ldvk-bf/PLACAR.git
+   cd PLACAR
    ```
 
 2. **Abra o arquivo `index.html`** no navegador (não precisa de servidor).
@@ -160,8 +160,8 @@ Compatível com: **Chrome**, **Edge**, **Firefox**, **Safari** e **Brave**.
 
 ## 🏆 Eventos Participados
 
-✅ **2 Campeonatos Internos da Unicamp**
-✅ **1 Campeonato Panamericano de Karatê**
+✅ **2 Campeonatos Internos da Unicamp - JKS**
+✅ **1 Campeonato Panamericano de Karatê - JKS**
 
 Utilizado em contextos reais de competição, com excelente estabilidade e desempenho.
 
@@ -170,7 +170,7 @@ Utilizado em contextos reais de competição, com excelente estabilidade e desem
 ## 👥 Autores
 
 * 🧑‍💻 **Ludivik de Paula** — Desenvolvedor principal
-* 👨‍💼 **Jorge** — Colaborador técnico e apoio em eventos
+* 👨‍💼 **Jorge** — Desenvolvedor inicial
 
 ---
 
