@@ -8,7 +8,7 @@
 
 ## 📖 Sobre o projeto
 
-O **Karate Scoreboard** é um sistema de **placar digital completo** para campeonatos de Karatê, cobrindo as modalidades **Kumite (luta)**, **Kata (demonstração em individuais/equipe)** e **Kata Individual (Para finais)**.
+O **PLACAR** é um sistema de **placar digital completo** para campeonatos de Karatê, cobrindo as modalidades **Kumite (luta)**, **Kata (demonstração em individuais/equipe)** e **Kata Individual (Para finais)**.
 
 O sistema foi projetado para funcionar **totalmente offline**, de forma **local** e **sincronizada em tempo real** entre as telas de operação e exibição pública.
 Essa comunicação acontece via [`BroadcastChannel`](https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel), dispensando qualquer tipo de servidor ou internet — ideal para uso em eventos esportivos.
