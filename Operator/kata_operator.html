@@ -41,11 +41,12 @@
                 onchange="mostrarNome('nameSelectAo', 'nameShowAo')">
                 <option value="">Select a kata</option>
             </select>
-            <button onclick="/*changeColor();*/ mostrarNoPublico('winner_ao');">Winner Ao</button>
+            <button id="btnLeft" onclick=" mostrarNoPublico('winner_ao');">Winner Ao</button>
         </div>
 
         <div class="footer-box">
-            <button onclick="/*changeColor();*/ mostrarNoPublico('winner_aka');">Winner Aka</button>
+            <button id="btnRight" onclick=" mostrarNoPublico('winner_aka');">Winner Aka</button>
+
             <select id="categorySelectAka" class="select" title="selectTypeOfKataAka"
                 onchange="atualizarLista('categorySelectAka', 'nameSelectAka')">
                 <option value="">Select</option>

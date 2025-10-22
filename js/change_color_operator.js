@@ -13,6 +13,18 @@ function bodyColorChange() {
     } else {
         document.body.id = "bodyException";
     }
+
+    var elementLeft = document.getElementById("btnLeft");
+    var elementRight = document.getElementById("btnRight");
+    const tempOnclick = elementLeft.onclick;
+    const tempInner = elementLeft.innerHTML;
+
+    elementLeft.onclick = elementRight.onclick;
+    elementRight.onclick = tempOnclick;
+
+    elementLeft.innerHTML = elementRight.innerHTML;
+    elementRight.innerHTML = tempInner;
+
 }
 
 canalColor.onmessage = (event) => {
