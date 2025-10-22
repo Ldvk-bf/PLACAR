@@ -81,7 +81,7 @@ O operador seleciona qual modo deseja operar:
 * **`kata_individual_operator.html`**
   Versão adaptada para competições individuais de Kata.
 
-Cada tela de operador possui um botão **“Show to public”**, que envia o modo atual (Kumite, Kata ou Kata Individual) para a tela de exibição principal `Public/presenting_to_public.html`.
+ Cada tela automatica atualiza a tela de exibição principal `Public/presenting_to_public.html`.
 
 ---
 
