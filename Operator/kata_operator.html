@@ -41,11 +41,11 @@
                 onchange="mostrarNome('nameSelectAo', 'nameShowAo')">
                 <option value="">Select a kata</option>
             </select>
-            <button onclick="mostrarNoPublico('winner_ao');">Winner Ao</button>
+            <button onclick="/*changeColor();*/ mostrarNoPublico('winner_ao');">Winner Ao</button>
         </div>
 
         <div class="footer-box">
-            <button onclick="mostrarNoPublico('winner_aka');">Winner Aka</button>
+            <button onclick="/*changeColor();*/ mostrarNoPublico('winner_aka');">Winner Aka</button>
             <select id="categorySelectAka" class="select" title="selectTypeOfKataAka"
                 onchange="atualizarLista('categorySelectAka', 'nameSelectAka')">
                 <option value="">Select</option>
@@ -63,11 +63,10 @@
         </div>
 
 
-
     </div>
     <script src="../js/kata_operator.js"></script>
     <script src="../js/show_to_public.js"></script>
-    <script src="../js/change_color.js"></script>
+    <script src="../js/change_color_operator.js"></script>
 </body>
 
 </html>
