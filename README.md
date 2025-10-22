@@ -160,7 +160,8 @@ Compatível com: **Chrome**, **Edge**, **Firefox**, **Safari** e **Brave**.
 
 ## 🏆 Eventos Participados
 
-✅ **2 Campeonatos Internos da Unicamp - JKS**
+✅ **1 Campeonatos Internos da Unicamp**
+✅ **1 Campeonatos Internos da Unicamp - JKS SP**
 ✅ **1 Campeonato Panamericano de Karatê - JKS**
 
 Utilizado em contextos reais de competição, com excelente estabilidade e desempenho.
@@ -169,8 +170,9 @@ Utilizado em contextos reais de competição, com excelente estabilidade e desem
 
 ## 👥 Autores
 
-* 🧑‍💻 **Ludivik de Paula** — Desenvolvedor principal
-* 👨‍💼 **Jorge** — Desenvolvedor inicial
+* 🧑‍💻 **Ludivik de Paula** — Idealizador & Desenvolvedor principal
+* 👨‍💼 **Jorge** — Idealizador & Desenvolvedor
+* 👨‍💼 **Sensei Thiago Frosi** — Idealizador
 
 ---
 
@@ -179,4 +181,4 @@ Utilizado em contextos reais de competição, com excelente estabilidade e desem
 Este projeto é de uso livre para fins **educacionais e esportivos**.
 Créditos obrigatórios ao utilizar publicamente:
 
-> *Karate Scoreboard – desenvolvido por Ludivik de Paula & Jorge.*
+> *PLACAR – desenvolvido por Ludivik de Paula & Jorge.*
