@@ -6,6 +6,10 @@ body {
     background: linear-gradient(to right, #c00000 50%, #0000c0 50%);
 }
 
+#bodyException {
+    background: linear-gradient(to right, #0000c0 50%, #c00000 50%);
+}
+
 * {
     margin: 0;
     padding: 0;
