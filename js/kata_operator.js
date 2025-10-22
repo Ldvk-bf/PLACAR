@@ -117,14 +117,12 @@ window.addEventListener("load", () => {
     if (dados.backgroundColor) {
       document.body.style.backgroundColor = dados.backgroundColor;
     }
-  } else {
-    // Caso não haja dados salvos, envia estado inicial
-    enviarEstado();
-  }
+    
+  } 
 
   ajustarTamanhoTexto("nameShowAka");
   ajustarTamanhoTexto("nameShowAo");
-  setTimeout(() => enviarEstado(), 300);
+  enviarEstado();
 });
 
 // -------- Alternância de cores e IDs --------
