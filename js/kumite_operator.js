@@ -36,7 +36,7 @@ function tocarSinoFinal() {
       audio.pause();
       audio.currentTime = 0;
     }, 2000); // toca 2 segundos inteiros
-    sino30Tocado = false;
+    sinoFinalTocado = false;
   } catch (_) { }
 }
 
