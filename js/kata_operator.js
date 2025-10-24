@@ -8,8 +8,8 @@ const categorias = {
   shiteikata: ["Jo No Kata", "Heian Shodan", "Heian Nidan", "Heian Sandan", "Heian Yondan", "Heian Godan", "Tekki Shodan"],
   senteikata: ["Bassai-dai", "Enpi", "Jion", "Kankū-dai"],
   tokuikata: ["Bassai-sho", "Chinte", "Gankaku", "Gojūshiho-dai", "Gojūshiho-sho", "Hangetsu", "Jiin", "Jitte", "Kankū-sho", "Meikyō", "Nijūshiho", "Sōchin", "Tekki Nidan", "Tekki Sandan", "Unsū", "Wankan"],
-  kotenkata: ["Kakuyoku Shodan", "Kakuyoku Nidan", "Kakuyoku Sandan", "Meikyō Nidan", "Suishu", "Kashu", "Roshu", "Hachimon", "Rantai", "Rakuyō", "Senshō", "Seiryū", "Kibaken", "Yonsō"],
-  kobudo: ["Suushi No Kon", "Sueyoshi No Kon", "Sakugawa No Kon", "Shirotaru No Kon", "Matsukaze No Kon", "Heian Shodan", "Heian Nidan", "Heian Sandan", "Heian Yondan", "Heian Godan"]
+  kotenkata: ["Kakuyoku Shodan", "Kakuyoku Nidan", "Kakuyoku Sandan", "Meikyō Nidan", "Suishu", "Kashu", "Roshu", "Hachimon", "Rantai", "Rakuyō", "Senshō", "Seiryū", "Kibaken", "Yonsō", "Jokko Issei", "Jokko Nissei", "Jokko Sansei", "Jokko Yonsei", "Jokko Gossei", "Kyakusen"],
+  kobudo: ["Suushi No Kon", "Sueyoshi No Kon", "Sakugawa No Kon", "Shirotaru No Kon", "Matsukaze No Kon", "Heian Shodan", "Heian Nidan", "Heian Sandan", "Heian Yondan", "Heian Godan"],
 };
 
 // Canal de sincronização
